@@ -1,6 +1,7 @@
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import Vue from '@vitejs/plugin-vue'
 import path from 'node:path'
+import postcssNesting from 'postcss-nesting'
 import VueMacros from 'unplugin-vue-macros/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
@@ -12,6 +13,11 @@ export default defineConfig({
     alias: {
       '@/': `${path.resolve(__dirname, 'src')}/`,
       '@types/': `${path.resolve(__dirname, 'src/types')}/`,
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [postcssNesting],
     },
   },
   plugins: [

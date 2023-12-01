@@ -26,7 +26,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@types": ["types"]
+      "@types": ["src/types"]
     }
   },
   "vueCompilerOptions": {
@@ -36,6 +36,6 @@
     ]
   },
   "exclude": ["dist", "node_modules"],
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "yml.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

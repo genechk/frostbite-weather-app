@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+import { ForecastPanel } from '@/components'
+import { BaseLayout } from '@/layouts'
 </script>
 
 <template>
-  <div>
-    {{ t('ui.tabs.main') }}
-  </div>
+  <BaseLayout>
+    <template #selectedTab>
+      <ForecastPanel />
+    </template>
+  </BaseLayout>
 </template>

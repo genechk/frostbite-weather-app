@@ -2,6 +2,8 @@ app:
   name: Frostbite
   description: Your friendly neighborhood weather app
   slogan: Whatever this world throws at you, be prepared.
+favorites:
+  header: Favorited Cities
 ui:
   actions:
     addToFavorites: Add to Favorites
@@ -15,3 +17,9 @@ ui:
   tabs:
     main: Forecast
     favorites: Favorites
+weather:
+  fiveDays: 5 Days Forecast
+  select:
+    fiveDays: 5 Days
+    today: Today
+  today: Today’s forecast

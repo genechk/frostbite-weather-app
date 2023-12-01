@@ -2,6 +2,8 @@ app:
   description: Дружній погодний застосунок
   name: Фростбайт
   slogan: Будь завчасно готовий до будь-яких кліматичних умов
+favorites:
+  header: Обрані міста
 ui:
   actions:
     addToFavorites: До обраного
@@ -15,3 +17,9 @@ ui:
   tabs:
     favorites: Обране
     main: Прогноз
+weather:
+  fiveDays: Прогноз на 5 днів
+  select:
+    fiveDays: На 5 днів
+    today: Сьогодні
+  today: Прогноз на сьогодні

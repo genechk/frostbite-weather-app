@@ -6,6 +6,9 @@ import { createI18n } from 'vue-i18n'
 import { createRouter, createWebHistory } from 'vue-router/auto'
 
 import App from './App.vue'
+
+// Global styles
+import '@unocss/reset/tailwind.css'
 import './style.css'
 
 const head = createHead()
