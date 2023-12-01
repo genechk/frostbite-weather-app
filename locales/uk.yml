@@ -1,0 +1,17 @@
+app:
+  description: Дружній погодний застосунок
+  name: Фростбайт
+  slogan: Будь завчасно готовий до будь-яких кліматичних умов
+ui:
+  actions:
+    addToFavorites: До обраного
+    deleteFromFavorites: Видалити
+  combo:
+    label: Обрати місто
+    placeholder: Введіть назву міста
+  forecast:
+    day: День
+    week: Тиждень
+  tabs:
+    favorites: Обране
+    main: Прогноз

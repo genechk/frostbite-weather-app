@@ -1,0 +1,17 @@
+app:
+  name: Frostbite
+  description: Your friendly neighborhood weather app
+  slogan: Whatever this world throws at you, be prepared.
+ui:
+  actions:
+    addToFavorites: Add to Favorites
+    deleteFromFavorites: Delete from Favorites
+  combo:
+    label: Select City
+    placeholder: Start typing city name
+  forecast:
+    day: Day
+    week: Week
+  tabs:
+    main: Forecast
+    favorites: Favorites
