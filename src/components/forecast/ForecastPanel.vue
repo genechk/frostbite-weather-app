@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 
 import { ForecastCard } from '@/components'
 
-const selectedCities = ref([{ name: 'Київ' }])
+const selectedCities = ref([{ name: 'Київ', label: 'Київ' }])
 const disableDelete = computed(() => selectedCities.value.length <= 1)
 </script>
 

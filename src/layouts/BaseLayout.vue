@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 
-import { TabList, TabEntry } from '@/components'
+import { BaseTabList, BaseTabEntry } from '@/components'
 
 const { t } = useI18n()
 
@@ -16,24 +16,24 @@ if (path === '/favorites') {
 
 <template>
   <div class="page-layout">
-    <TabList
+    <BaseTabList
       v-model="selectedTab"
       active-class="selected-tab"
       class="tab-list"
     >
-      <TabEntry
+      <BaseTabEntry
         class="tab-entry"
         to="/"
       >
         {{ t('ui.tabs.main') }}
-      </TabEntry>
-      <TabEntry
+      </BaseTabEntry>
+      <BaseTabEntry
         class="tab-entry"
         to="/favorites"
       >
         {{ t('ui.tabs.favorites') }}
-      </TabEntry>
-    </TabList>
+      </BaseTabEntry>
+    </BaseTabList>
     <main class="tab-panel">
       <slot name="selectedTab"></slot>
     </main>

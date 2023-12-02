@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import StarIcon from '@heroicons/vue/24/outline/StarIcon'
-import { useModel } from 'vue'
+import { ref, useModel } from 'vue'
 
 import type { City } from '@types'
-import { TabList, TabEntry } from '../ui'
+import { BaseAutocomplete, BaseTabList, BaseTabEntry } from '../ui'
 
 const props = defineProps<{
   modelValue: City
@@ -12,17 +12,27 @@ const props = defineProps<{
 }>()
 const city = useModel(props, 'modelValue')
 
+const citiesList = ref([
+  { label: 'Харків' },
+  { label: 'Херсон' },
+  { label: 'Запоріжжя' },
+])
+
 const { t } = useI18n()
 </script>
 
 <template>
   <div>
-    <TabList>
-      <TabEntry>{{ t('weather.select.today') }}</TabEntry>
-      <TabEntry>{{ t('weather.select.fiveDays') }}</TabEntry>
-    </TabList>
+    <BaseTabList>
+      <BaseTabEntry>{{ t('weather.select.today') }}</BaseTabEntry>
+      <BaseTabEntry>{{ t('weather.select.fiveDays') }}</BaseTabEntry>
+    </BaseTabList>
     <button :disabled="disableDelete">×</button>
-    <h1>{{ city.name }}</h1>
+    <h1>{{ city.label }}</h1>
+    <BaseAutocomplete
+      v-model="city"
+      :items="citiesList"
+    />
     <p>{{ t('weather.today') }}</p>
     <button class="icon-button">
       <StarIcon class="star-icon" />
